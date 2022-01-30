@@ -1,14 +1,17 @@
 .navbar{
     flex: 0.2;
+    top: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background-color: #232323;
     padding: 2rem 0;
+    position: sticky;
 }
 .logo_title{
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
 .footer{
