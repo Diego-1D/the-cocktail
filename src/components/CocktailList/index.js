@@ -1,76 +1,42 @@
 import React from 'react';
 import './styles.css';
-import { Card, Col, Row } from 'antd';
+import SearchCocktail from '../SearchCocktail';
+import { useGlobalContext } from '../../services/context';
+import CocktailCard from '../CocktailCard';
+import { Col, Row, Typography } from 'antd';
+import Loading from '../Loading';
 
 const CocktailList = () => {
+
+    const { cocktails, loading } = useGlobalContext();
+
     return (
         <div className='container_cocktailist'>
-            <Row gutter={[32, 32]}>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6} >
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6} >
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        extra={<img className='card_img' src='https://www.thecocktaildb.com/images/media/drink/2x8thr1504816928.jpg' />}
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-            </Row>
-
+            <SearchCocktail />
+            {
+                loading ?
+                    <Loading />
+                    :
+                    cocktails.length < 1 &&
+                    <Typography.Title
+                        level={3}
+                        style={{ textAlign: 'center', marginTop: 70 }} >
+                        Ops! Nenhuma uma bebida foi encontrada!
+                    </Typography.Title>
+            }
+            <div className='section_cocktails'>
+                <Row gutter={[52, 32]} justify='center'>
+                    {
+                        cocktails.map((item, key) => {
+                            return (
+                                <Col>
+                                    <CocktailCard key={key} {...item} />
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
+            </div>
         </div>
     )
 };
