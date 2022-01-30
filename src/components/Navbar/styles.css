@@ -1,0 +1,21 @@
+.navbar{
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #232323;
+    padding: 2rem 0;
+}
+.logo_title{
+    color: #FFFFFF;
+}
+
+.footer{
+    display: flex;
+    line-height: 1.2rem;
+}
+.footer_text{
+    color: #FFFFFF;
+    text-align: center;
+}
