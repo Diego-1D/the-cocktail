@@ -1,0 +1,16 @@
+.container_cocktailist{
+    flex: 0.8;
+    background-color: #F2F2F2;
+}
+
+.row{
+    background-color: green;
+}
+
+.col{
+    background-color: navy;
+}
+
+.card_img{
+    width: 150px;
+}
