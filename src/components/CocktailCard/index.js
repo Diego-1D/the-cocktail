@@ -1,20 +1,20 @@
-import { Card, Col, Row } from 'antd';
 import React from 'react';
+import './styles.css';
+import { Card } from 'antd';
 
-const CocktailCard = () => {
+const CocktailCard = ({ id, name, image, info, glass }) => {
     return (
         <>
-            <Row gutter={[32, 32]}>
-                <Col xs={24} sm={12} lg={6}>
-                    <Card
-                        title='Karsk'
-                    >
-                        <p>Karsk</p>
-                        <p>Highball glass</p>
-                        <p>Alcoholic</p>
-                    </Card>
-                </Col>
-            </Row>
+            <Card
+                key={id}
+                className='card'
+                hoverable
+                cover={<img className='card_img' src={image} />}
+            >
+                <p className='title'>{name}</p>
+                <p className='subtitle'>{glass}</p>
+                <p className='title_gray'>{info}</p>
+            </Card>
         </>
     );
 };
