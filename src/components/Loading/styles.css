@@ -1,0 +1,9 @@
+.loader{
+    flex: 0.8;
+    height: 100%;
+    text-align: center;
+}
+
+.loader_img{
+    width: 500px;
+}
