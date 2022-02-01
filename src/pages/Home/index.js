@@ -2,12 +2,13 @@ import React from 'react';
 import './styles.css';
 import Navbar from '../../components/Navbar';
 import CocktailList from '../../components/CocktailList';
+import SearchCocktail from '../../components/SearchCocktail';
 
 const Home = () => {
     return (
         <div className='container_home'>
-            <Navbar/>
-            <CocktailList/>
+            <SearchCocktail />
+            <CocktailList />
         </div>
     )
 };

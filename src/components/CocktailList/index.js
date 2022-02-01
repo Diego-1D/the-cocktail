@@ -11,8 +11,7 @@ const CocktailList = () => {
     const { cocktails, loading } = useGlobalContext();
 
     return (
-        <div className='container_cocktailist'>
-            <SearchCocktail />
+        <div className='section_cocktaillist'>
             {
                 loading ?
                     <Loading />
@@ -24,19 +23,18 @@ const CocktailList = () => {
                         Ops! Nenhuma uma bebida foi encontrada!
                     </Typography.Title>
             }
-            <div className='section_cocktails'>
-                <Row gutter={[52, 32]} justify='center'>
-                    {
-                        cocktails.map((item, key) => {
-                            return (
-                                <Col>
-                                    <CocktailCard key={key} {...item} />
-                                </Col>
-                            )
-                        })
-                    }
-                </Row>
-            </div>
+            <Row gutter={[52, 32]} justify='center'>
+                {
+                    cocktails.map((item, key) => {
+                        return (
+                            <Col>
+                                <CocktailCard key={key} {...item} />
+                            </Col>
+                        )
+                    })
+                }
+            </Row>
+
         </div>
     )
 };

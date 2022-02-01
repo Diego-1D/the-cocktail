@@ -1,5 +1,6 @@
 .container_home{
-    width: 100%;
+    flex: 1;
     height: auto;
-    display: flex;
+    padding: 2rem;
+    background-color: #F2F2F2;
 }
