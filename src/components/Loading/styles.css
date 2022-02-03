@@ -6,4 +6,5 @@
 
 .loader_img{
     width: 500px;
+    filter:grayscale(1);
 }

@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
 
     const fetchCocktails = useCallback(async () => {
         setLoading(true);
+        setCocktails([]);
         try {
             const response = await fetch(`${url}${searchTerm}`)
             const data = await response.json();

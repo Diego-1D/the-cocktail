@@ -1,7 +1,6 @@
 import React from 'react';
 import './styles.css';
 import { Input } from 'antd';
-
 import { useGlobalContext } from '../../services/context';
 
 const SearchCocktail = () => {
@@ -11,7 +10,7 @@ const SearchCocktail = () => {
     return (
         <div className='search_cocktail'>
             <Input
-                placeholder='Pesquisar por bebidas'
+                placeholder='Search by cocktail'
                 style={{ borderRadius: 3 }} 
                 onChange={(e) => setSearchTerm(e.target.value.toLowerCase())}
             />

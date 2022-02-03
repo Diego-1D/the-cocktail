@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles.css';
-import Navbar from '../../components/Navbar';
 import CocktailList from '../../components/CocktailList';
 import SearchCocktail from '../../components/SearchCocktail';
 

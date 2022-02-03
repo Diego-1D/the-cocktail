@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './styles.css';
-import { useParams } from 'react-router-dom';
-import Navbar from '../../components/Navbar';
-import { Typography } from 'antd';
+import Loading from '../../components/Loading';
+import { useParams, Link } from 'react-router-dom';
+import { Button, Typography } from 'antd';
+import { ArrowLeftOutlined } from '@ant-design/icons';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
 
@@ -56,7 +57,7 @@ const CocktailDetails = () => {
     }, [id]);
 
     if (!cocktail) {
-        return <h2>no cocktial to display</h2>
+        return <Loading />
     }
 
     const {
@@ -69,28 +70,39 @@ const CocktailDetails = () => {
     } = cocktail;
 
     return (
-        <>
-            <div className='container_detail'>
-                <div className='area_info'>
-                    <img className='img_detail' src={image} alt={name} />
-                    <div className='info'>
-                        <Typography.Title level={4} >Name: {name}</Typography.Title>
-                        <Typography.Title level={4}>Info: {info}</Typography.Title>
-                        <Typography.Title level={4}>Glass: {glass}</Typography.Title>
-                        <Typography.Title level={4}>Instructions: {instructions}</Typography.Title>
-                        <Typography.Title level={4}>Ingredients: </Typography.Title>
+        <div className='container_detail'>
+            <Link to='/' >
+                <Button size='large' className='back_button' >
+                    <ArrowLeftOutlined />Voltar</Button>
+            </Link>
+            <div className='area_info'>
+                <img className='img_detail' src={image} alt={name} />
+                <div className='info'>
+                    <Typography.Title level={4}>Name:
+                        <Typography.Text className='text_desc'>{name}</Typography.Text>
+                    </Typography.Title>
+                    <Typography.Title level={4} >Info:
+                        <Typography.Text className='text_desc' >{info}</Typography.Text>
+                    </Typography.Title>
+                    <Typography.Title level={4}>Glass:
+                        <Typography.Text className='text_desc' >{glass}</Typography.Text>
+                    </Typography.Title>
+                    <Typography.Title level={4}>Instructions:
+                        <Typography.Text className='text_desc' >{instructions}</Typography.Text>
+                    </Typography.Title>
+                    <Typography.Title level={4}>Ingredients:
                         {
                             ingredients.map((item, index) => {
                                 return item ?
-                                <Typography.Title level={5} key={index}>{item}</Typography.Title>
+                                    <Typography.Text key={index} className='text_desc' >{item}, </Typography.Text>
                                     :
                                     null
                             })
                         }
-                    </div>
+                    </Typography.Title>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
