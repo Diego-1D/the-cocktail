@@ -7,18 +7,33 @@
     align-items: center;
     justify-content: space-between;
     background-color: #232323;
-    padding: 2rem 0;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
     position: sticky;
 }
 .logo_title{
     color: #FFFFFF !important;
 }
 
-.footer{
+.footer_nav{
     display: flex;
     line-height: 1.2rem;
 }
-.footer_text{
+.footer_text_nav{
     color: #FFFFFF;
     text-align: center;
+}
+
+@media screen and (max-width: 1024px){
+    .navbar{
+        padding: 0.1rem;
+        position: relative;
+    }
+    .logo_title{
+        font-size: 26px !important;
+        padding-top: 8px;
+    }
+    .footer_nav{
+        display: none;
+    }
 }
