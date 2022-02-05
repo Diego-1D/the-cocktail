@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './styles.css';
 import Loading from '../../components/Loading';
 import { useParams, Link } from 'react-router-dom';
-import { Button, Typography } from 'antd';
+import { Button, Image, Typography } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 
 const url = 'https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i='
@@ -71,11 +71,14 @@ const CocktailDetails = () => {
 
     return (
         <div className='container_detail'>
+            <div className='button_area'>
             <Link to='/' >
                 <Button size='large' className='back_button' >
-                    <ArrowLeftOutlined />Voltar</Button>
+                    <ArrowLeftOutlined />Voltar
+                    </Button>
             </Link>
-            <div className='area_info'>
+            </div>
+            <div className='info_area'>
                 <img className='img_detail' src={image} alt={name} />
                 <div className='info'>
                     <Typography.Title level={4}>Name:
