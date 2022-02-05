@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/the-cocktail/static/css/main.159695ed.css",
-    "main.js": "/the-cocktail/static/js/main.2ffff043.js",
+    "main.js": "/the-cocktail/static/js/main.14d92e99.js",
     "index.html": "/the-cocktail/index.html",
     "main.159695ed.css.map": "/the-cocktail/static/css/main.159695ed.css.map",
-    "main.2ffff043.js.map": "/the-cocktail/static/js/main.2ffff043.js.map"
+    "main.14d92e99.js.map": "/the-cocktail/static/js/main.14d92e99.js.map"
   },
   "entrypoints": [
     "static/css/main.159695ed.css",
-    "static/js/main.2ffff043.js"
+    "static/js/main.14d92e99.js"
   ]
 }
