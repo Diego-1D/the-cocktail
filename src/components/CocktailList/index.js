@@ -27,8 +27,8 @@ const CocktailList = () => {
                 {
                     cocktails.map((item, key) => {
                         return (
-                            <Col>
-                                <CocktailCard key={key} {...item} />
+                            <Col key={key}>
+                                <CocktailCard {...item} />
                             </Col>
                         )
                     })
