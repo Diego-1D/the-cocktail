@@ -1,13 +1,18 @@
 .container_home{
     flex: 0.8;
     height: auto;
-    /* min-height: 100vh; */
     padding: 1.5rem;
     background-color: #F2F2F2;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-  
+}
+
+@media screen and (max-width: 1024px){
+    .container_home{
+     flex: 1;
+     height: 100%;
+    }
 }
 
 @media screen and (max-width: 495px){

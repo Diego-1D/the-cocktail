@@ -6,8 +6,11 @@
 }
 .container_app{
   width: 100%;
+  min-height: 100vh;
   height: auto;
   display: flex;
+  justify-content: space-between;
+  background-color: blue;
 }
 
 @media screen and (max-width: 1024px){

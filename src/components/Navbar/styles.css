@@ -26,8 +26,9 @@
 
 @media screen and (max-width: 1024px){
     .navbar{
-        padding: 0.1rem;
+        padding: 0;
         position: relative;
+        flex: 0;
     }
     .logo_title{
         font-size: 26px !important;

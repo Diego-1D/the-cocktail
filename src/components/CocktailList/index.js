@@ -23,7 +23,7 @@ const CocktailList = () => {
                         Ops! Nenhuma uma bebida foi encontrada!
                     </Typography.Title>
             }
-            <Row gutter={[52, 32]} justify='center'>
+            <Row gutter={[42, 42]} justify='center'>
                 {
                     cocktails.map((item, key) => {
                         return (
