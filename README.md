@@ -15,6 +15,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 - React JS
 - Context Api
+- Api
 - Ant Design
 
 ### ✔️ Projeto disponível no link abaixo:
